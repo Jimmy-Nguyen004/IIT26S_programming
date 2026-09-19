@@ -1,3 +1,5 @@
+print("Program starting.")
+
 print()
 
 word = input("Insert a compound word: ")
@@ -22,3 +24,5 @@ substring = word[start:stop:step]
 print()
 
 print(f"The word '{word}' sliced to the defined substring is '{substring}'.")
+
+print("Program ending.")
