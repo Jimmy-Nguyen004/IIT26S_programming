@@ -15,5 +15,5 @@ rounded = int(round(average, 0))
 
 print()
 print(f"In total you spent {total} minutes on programming.")
-print(f"Average per task was {average} min and same rounded to the nearest integer {rounded} min.")
+print(f"Average per task was {average:.2f} min and same rounded to the nearest integer {rounded} min.")
 print()
