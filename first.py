@@ -1,3 +1,3 @@
-print ("Hello World")
-num = 12
-print(round(num, 2))
+string = "Hello, this is Python!"
+words = string.split(" ")
+print(words)
