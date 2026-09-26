@@ -1,4 +1,4 @@
-#print("Program starting.")
+print("Program starting.")
  
 print("Insert two integers.")
 first = int(input("Insert first integer: "))
