@@ -26,3 +26,12 @@
  - [A3_T5](week_3/A3_T5.py)
  - [A3_T6](week_3/A3_T6.py)
  - [A3_T7](week_3/A3_T7.py)
+
+## Week 4
+ - [A4_T1](week_4/A4_T1.py)
+ - [A4_T2](week_4/A4_T2.py)
+ - [A4_T3](week_4/A4_T3.py)
+ - [A4_T4](week_4/A4_T4.py)
+ - [A4_T5](week_4/A4_T5.py)
+ - [A4_T6](week_4/A4_T6.py)
+ - [A4_T7](week_4/A4_T7.py)
