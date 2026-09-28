@@ -15,6 +15,8 @@ def show(count):
 def increase_count(count):
     count += 1
     return count
+
+
 def main():
     print("Program starting.")
     count = 0
