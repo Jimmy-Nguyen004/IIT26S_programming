@@ -36,9 +36,9 @@ def main():
             print("Exiting program.")
             break
         else:
-            print("Unknown option.")
+            print("Unknown option! Try again.")
 
     print()
     print("Program ending.")
-    
+
 main()
