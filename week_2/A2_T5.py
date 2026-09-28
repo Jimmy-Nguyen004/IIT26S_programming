@@ -6,11 +6,11 @@ word = input("Insert a compound word: ")
 
 reverse = word[::-1]
 length = len(word)
-first_char = word[1]
+last_char = word[1]
 
 print(f"The word you inserted is '{word}' and in reverse it is '{reverse}'.")
 print(f"The inserted word length is {length}.")
-print(f"First character is '{first_char}'.")
+print(f"last character is '{last_char}'.")
 
 print()
 
