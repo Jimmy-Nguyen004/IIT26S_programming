@@ -1,0 +1,7 @@
+Name,Age,Country
+John Doe,30,USA
+Jane Smith,25,Canada
+Michael Johnson,35,UK
+Sara Davis,28,Australia
+Ahmed Ali,32,Egypt
+Sophie Martin,29,France
