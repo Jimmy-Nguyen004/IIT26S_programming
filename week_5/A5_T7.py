@@ -1,4 +1,5 @@
 DELIMITER = ","
+
 def collectWords():
     words = ""
     while True:
@@ -10,6 +11,7 @@ def collectWords():
         else:
             words = words + DELIMITER + word
     return words
+
 def analyseWords(words):
     if words == "":
         wordList = []
