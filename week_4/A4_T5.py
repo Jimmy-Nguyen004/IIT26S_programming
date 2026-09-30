@@ -15,7 +15,7 @@ if inspection < start or inspection > stop:
 if condition == True:
     print("\nFirst loop - inspection with break")
     first_char = True
-    for i in range(start, inspection):
+    for i in range(start, stop):
         if i == inspection:
             break
         if first_char:

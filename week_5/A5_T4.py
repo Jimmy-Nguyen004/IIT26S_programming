@@ -12,7 +12,7 @@ def main() -> None:
     Height = askDimension("height")
     Area = calcRectangleArea(Width, Height)
     print("")
-    print("Area is {Area}²")
+    print(f"Area is {Area}²")
     print("Program ending.")
     return None
 main()
