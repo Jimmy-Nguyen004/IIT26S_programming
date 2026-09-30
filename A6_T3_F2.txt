@@ -1,0 +1,6 @@
+Webpage Name,Visits,Time Spent (minutes)
+Homepage,500,10
+About Us,300,5
+Services,450,8
+Contact Us,200,4
+Products,600,12

@@ -6,7 +6,7 @@ def calcRectangleArea(PWidth: float, PHeight: float):
    Area = PWidth * PHeight
    return Area
 
-def main() -> None:
+def main():
     print("Program starting.")
     Width = askDimension("width")
     Height = askDimension("height")
