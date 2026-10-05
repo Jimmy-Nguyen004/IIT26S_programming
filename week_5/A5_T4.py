@@ -1,8 +1,8 @@
-def askDimension(PPrompt: str):
+def askDimension(PPrompt: str) ->float:
    Feed = float(input(f"Insert {PPrompt}: "))
    return Feed
 
-def calcRectangleArea(PWidth: float, PHeight: float):
+def calcRectangleArea(PWidth: float, PHeight: float) ->float:
    Area = PWidth * PHeight
    return Area
 
