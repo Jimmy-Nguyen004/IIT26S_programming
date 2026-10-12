@@ -8,8 +8,8 @@ def greetUser(PName):
 
 def main():
     print("Program starting.")
-    PName = askName()
-    greetUser(PName)
+    Name = askName()
+    greetUser(Name)
     print("Program ending.")
     return None
 
