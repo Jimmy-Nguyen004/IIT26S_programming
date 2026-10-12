@@ -1,7 +1,7 @@
 def frameWord(word):
     a = "*" * (len(word) + 4)
     print(a)
-    print("*-" + word + "-*")
+    print("* " + word + " *")
     print(a)
     return None
 

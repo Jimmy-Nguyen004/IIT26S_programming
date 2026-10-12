@@ -24,6 +24,13 @@ if condition == True:
             print(" ", end="")
         print(i, end="")
     print()
+# using .strip() is possible
+#   line = ""
+#   for i in range(start, stop):
+#       if i == inspection:
+#           break
+#       line += str(i) + " "
+#   print(line.strip())
 
     print("Second loop - inspection will continue:")
     first_char = True

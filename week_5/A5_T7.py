@@ -23,10 +23,12 @@ def analyseWords(words):
     for word in wordList:
         char += len(word)
 
-    if wordCount > 0:
-        wordAverage = char / wordCount
-    else:
-        wordAverage = 0
+#    if wordCount > 0:
+#        wordAverage = char / wordCount
+#    else:
+#        wordAverage = 0
+    wordAverage = char / wordCount if wordCount > 0 else 0
+    
     print("- {} Words".format(wordCount))
     print("- {} Characters".format(char))
     print("- {:.2f} Average word length".format(wordAverage))

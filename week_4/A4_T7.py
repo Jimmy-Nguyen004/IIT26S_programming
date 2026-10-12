@@ -20,3 +20,4 @@ while len(str(number)) > 1:
 
 print("No more steps.")
 print(f"\nThis program took {steps} step(s)")
+print("\nProgram ending.")

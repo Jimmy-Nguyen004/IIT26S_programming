@@ -5,6 +5,9 @@ char_count = 0
 
 word = input("Insert word (empty stop): ")
 while word != "":
+    # word = input("Insert word (empty stop): ")
+    # if word == "":
+    #   break
     word_count += 1
     char_count += len(word)
     word = input("Insert word (empty stop): ")

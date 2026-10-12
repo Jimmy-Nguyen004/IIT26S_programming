@@ -3,13 +3,13 @@ def askName():
     return PName
 
 def greetUser(PName):
-    print(f"Hello {PName}")
+    print(f"Hello {PName}!")
     return None
 
 def main():
     print("Program starting.")
-    name = askName()
-    greetUser(name)
+    Name = askName()
+    greetUser(Name)
     print("Program ending.")
     return None
 
