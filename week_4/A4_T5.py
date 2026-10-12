@@ -3,7 +3,7 @@ print("Program starting.\n")
 start = int(input("Insert starting point: "))
 stop = int(input("Insert stopping point: "))
 inspection = int(input("Insert inspection point: "))
-
+print()
 condition = True
 if start >= stop:
     print("Starting point value must be less than the stopping point value.")
