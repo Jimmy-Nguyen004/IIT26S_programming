@@ -1,4 +1,4 @@
-SEPERATOR = ","
+SEPARATOR = ","
 #read values function
 def readValues(filename) -> str:
     values = ""
@@ -10,12 +10,12 @@ def readValues(filename) -> str:
             if values == "":
                 values = value
             else:
-                values += SEPERATOR + value
+                values += SEPARATOR + value
         return values
 
 #analysing values function
 def analyseValues(values) -> str:
-    numbers = values.split(SEPERATOR) if values != 0 else []
+    numbers = values.split(SEPARATOR) if values != 0 else []
     count = 0
     sum = 0
     greater = 0
