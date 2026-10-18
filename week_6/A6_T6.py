@@ -18,6 +18,7 @@ def cipher(text):
             result = result + upper[i]
         else:
             result = result + char
+    return result
 
 def main():
     print("Program starting.")
