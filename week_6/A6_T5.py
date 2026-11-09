@@ -1,6 +1,6 @@
 SEPARATOR = ","
 #read values function
-def readValues(filename) -> str:
+def readValues(filename):
     values = ""
     with open(f'week_6/files/{filename}', "r", encoding="UTF-8") as source:
         for line in source:
@@ -14,7 +14,7 @@ def readValues(filename) -> str:
         return values
 
 #analysing values function
-def analyseValues(values) -> str:
+def analyseValues(values):
     numbers = values.split(SEPARATOR) if values != 0 else []
     count = 0
     sum = 0

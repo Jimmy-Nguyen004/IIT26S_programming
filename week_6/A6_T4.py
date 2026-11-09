@@ -1,4 +1,4 @@
-def readNames(filename: str):
+def readNames(filename):
     print(f'Reading names from "{filename}".')
     names= ""
     with open(f"week_6/files/{filename}", "r", encoding="UTF-8") as source:
