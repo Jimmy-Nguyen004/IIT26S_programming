@@ -1,15 +1,17 @@
-def readFile(filename):
+def readFile(filename: str)-> str:
     print(f"Reading file '{filename}' content.")
     content = ""
     with open(f"week_6/files/{filename}", "r", encoding="UTF-8") as source:
         content = source.read()
+    source.close()
     print("File content ready in memory.")
     return content
 
-def copyFile(filename, content):
+def copyFile(filename: str, content: str):
     print(f"Writing content into file '{filename}'.")
     with open(filename, "w", encoding="UTF-8") as destination:
         destination.write(content)
+        destination.close()
     return None
 
 def main():

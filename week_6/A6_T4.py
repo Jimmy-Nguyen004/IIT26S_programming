@@ -1,4 +1,4 @@
-def readNames(filename):
+def readNames(filename: str)-> str:
     print(f'Reading names from "{filename}".')
     names= ""
     with open(f"week_6/files/{filename}", "r", encoding="UTF-8") as source:
@@ -12,7 +12,7 @@ def readNames(filename):
                 names += ";" + name
     return names
 
-def analyseNames(names):
+def analyseNames(names: str)-> str:
     print("Analysing names...")
     namelist = names.split(";") if names != "" else []
     count = len(namelist)

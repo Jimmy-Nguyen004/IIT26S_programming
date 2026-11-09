@@ -1,6 +1,6 @@
 SEPARATOR = ","
 #read values function
-def readValues(filename):
+def readValues(filename: str) -> str:
     values = ""
     with open(f'week_6/files/{filename}', "r", encoding="UTF-8") as source:
         for line in source:
@@ -14,7 +14,7 @@ def readValues(filename):
         return values
 
 #analysing values function
-def analyseValues(values):
+def analyseValues(values: str) -> str:
     numbers = values.split(SEPARATOR) if values != 0 else []
     count = 0
     sum = 0
@@ -32,8 +32,9 @@ def analyseValues(values):
     result += str(greater) + ";"
     result += str(average)
     return result
+
 #displaying function
-def displayingValues(filename, result):
+def displayingValues(filename: str, result: str) -> None:
     print("#### Number analysis - START ####")
     print(f'File {filename} results:')
     print("Count;Sum;Greatest;Average")
@@ -43,9 +44,11 @@ def displayingValues(filename, result):
     return None
 
 #main function
-print("Program starting.")
-filename = input("Insert filename: ")
-values = readValues(filename)
-result = analyseValues(values)
-displayingValues(filename, result)
-print("Program ending.")
+def main():
+    print("Program starting.")
+    filename = input("Insert filename: ")
+    values = readValues(filename)
+    result = analyseValues(values)
+    displayingValues(filename, result)
+    print("Program ending.")
+main()
