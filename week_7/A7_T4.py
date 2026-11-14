@@ -1,4 +1,4 @@
-DELIMETER = ";"
+DELIMITER = ";"
 
 class Timestamp:
     weekday = ""
@@ -15,7 +15,7 @@ def readTimestamps(PFilename: str, PTimestamps: list[Timestamp]) -> None:
             Row = Line.rstrip()
             if len(Row) == 0: # skip empty line
                 continue
-            Column = Row.split(DELIMETER)
+            Column = Row.split(DELIMITER)
             TIMESTAMP = Timestamp()
             TIMESTAMP.weekday = Column[0]
             TIMESTAMP.hour = int(Column[1])

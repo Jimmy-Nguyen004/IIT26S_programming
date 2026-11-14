@@ -14,8 +14,8 @@ def readFile(PFilename: str, PRows: list[str]) -> None:
 def analyseTimestamps(PRows: list[str], PResults: list[str]) -> None:
     print("Analysing timestamps.")
     WeekdayTimestampAmount: list[int] = [0, 0, 0, 0, 0, 0, 0]
-    for i in range(len(PRows)): # interate rows with i
-        for j in range(len(WEEKDAYS)): # interate weekdays with k
+    for i in range(len(PRows)): # iterate rows with i
+        for j in range(len(WEEKDAYS)): # iterate weekdays with k
             if PRows[i].startswith(WEEKDAYS[j]): # check if the row starts with the weekday name
                 WeekdayTimestampAmount[j] += 1 # count the day in proper place
     for i in range(len(WEEKDAYS)): # iterate WEEKDAYS with i and append the daily results
