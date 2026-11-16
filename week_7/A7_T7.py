@@ -61,4 +61,6 @@ def forwardRun(PRotors: list[str], PPositions: list[int], PChar: str) -> str:
     for i in range(len(PRotors)):
         Rotor = PRotors[i]
         Position = PPositions[i]
-        Number = Alphabet.index(Char) + 26
+        Number = Alphabet.index(Char) + Position
+        if Number >= 26:
+            Number -= 26
