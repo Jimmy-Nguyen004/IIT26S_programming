@@ -78,4 +78,5 @@ def main():
     print("Time to leave...")
     print("Program ending.")
 
-main()
+if __name__ == "__main__":
+    main()
