@@ -62,6 +62,8 @@
  - [A7_T5](week_7/A7_T5.py)
  - [A7_T6](week_7/A7_T6.py)
  - [A7_T7](week_7/A7_T7.py)
+ - [A7_T7_1(With class)](week_7/A7_T7_1.py)
+ - [A7_T7_1(With plugboard)](week_7/A7_T7_Plugboard.py)
 
 ## Week 8
  - [A8_T1](week_8/A8_T1.py)

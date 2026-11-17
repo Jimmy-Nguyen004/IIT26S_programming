@@ -28,6 +28,7 @@ Reflector: str
 
 Alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 DELIMITER = ":"
+
 # no idea!
 def readConfig(PFilename: str, PRotors: list[str]) -> str:
     PRotors.clear()
