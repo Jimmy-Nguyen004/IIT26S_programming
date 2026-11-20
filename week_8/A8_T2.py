@@ -16,9 +16,9 @@ def askChoice() -> int:
     choice = input("Your choice: ")
     try:
         choice = int(choice)
-    except ValueError:
+    except ValueError: # prevent wrong input from user
         choice = -1
-    return choice
+    return int(choice)
 
 def askValue(PPrompt: str) -> float:
     value = float(input(PPrompt))
