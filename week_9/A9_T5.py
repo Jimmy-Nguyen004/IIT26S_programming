@@ -7,7 +7,7 @@
 BYTE_MIN = 0
 BYTE_MAX = 255
 
-def collectBytes(PPrompt: str) -> int:
+def collect_bytes(PPrompt: str) -> int:
     try: 
         value = int(PPrompt)
     except ValueError:
@@ -26,11 +26,11 @@ def main():
     print("Program starting.")
     try:
         red = input("Insert red: ")
-        red = collectBytes(red)
+        red = collect_bytes(red)
         green = input("Insert green: ")
-        green = collectBytes(green)
+        green = collect_bytes(green)
         blue = input("Insert blue: ")
-        blue = collectBytes(blue)
+        blue = collect_bytes(blue)
         showBytes(red, green, blue)
     except ValueError:
         print("Couldn't perform the designed task due to the invalid input values.")
