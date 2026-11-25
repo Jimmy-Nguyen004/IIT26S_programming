@@ -1,3 +1,9 @@
+########################################################
+# Task A9_T6
+# Developer: Nguyen Cat Duc Khiem
+# Date: 21/11/2026
+########################################################
+
 def show_options() -> None:
     print("Options:\n1 - Insert line\n2 - Save lines\n0 - Exit")
     return None
