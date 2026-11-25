@@ -1,4 +1,4 @@
-def frameWord(word):
+def frame_word(word):
     a = "*" * (len(word) + 4)
     print(a)
     print("* " + word + " *")
@@ -9,7 +9,7 @@ def main():
     print("Program starting.")
     word = input("Insert word: ")
     print()
-    frameWord(word)
+    frame_word(word)
     print()
     print("Program ending.")
     return None

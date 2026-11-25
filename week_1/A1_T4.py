@@ -1,8 +1,8 @@
-Num1 = 47
-Num2 = 102
-Sum = Num1 + Num2
-Diff = Num2 - Num1
-Product = Sum * Diff
-print(f'{Num1} + {Num2} = {Sum}')
-print(f'{Num2} - {Num1} = {Diff}')
-print(f"( {Num1} + {Num2} ) * ( {Num2} - {Num1} ) = {Product}")
+num1 = 47
+num2 = 102
+sum = num1 + num2
+diff = num2 - num1
+product = sum * diff
+print(f'{num1} + {num2} = {sum}')
+print(f'{num2} - {num1} = {diff}')
+print(f"( {num1} + {num2} ) * ( {num2} - {num1} ) = {product}")

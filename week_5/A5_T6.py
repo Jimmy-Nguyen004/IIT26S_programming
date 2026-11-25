@@ -1,11 +1,11 @@
-def showOptions():
+def show_options():
     print("Options: ")
     print("1 - Show count")
     print("2 - Increase count")
     print("3 - Reset count")
     print("0 - Exit")
 
-def askChoice():
+def ask_choice():
     choice = input("Your choice: ")
     return choice
 
@@ -22,8 +22,8 @@ def main():
     count = 0
 
     while True:
-        showOptions()
-        choice = askChoice()
+        show_options()
+        choice = ask_choice()
         if choice == "0":
             print("Exiting program.")
             break

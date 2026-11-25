@@ -1,11 +1,11 @@
 import A8_T3_lib as lib
 import template as template
 
-def showChoices() -> None:
+def show_choices() -> None:
     print("Options:\n1 - Read values\n2 - Amount of values\n3 - Calculate sum of values\n4 - Calculate average of values\n0 - Exit")
     return None
 
-def readValues(PValues: list[float]) -> None:
+def read_values(PValues: list[float]) -> None:
     filename = input("Insert filename: ")
     PValues.clear()
     with open(filename, "r", encoding="UTF-8") as source:
@@ -20,16 +20,16 @@ def main() -> None:
     print("Program starting.")
     values: list[float] = []
     while True:
-        showChoices()
-        choice = template.askChoice()
+        show_choices()
+        choice = template.ask_choice()
         if choice == 1:
-            readValues(values)
+            read_values(values)
         elif choice == 2:
             print("Amount of values {}".format(len(values)))
         elif choice == 3:
-            print("Sum of values {}".format(lib.calculateSum(values)))
+            print("Sum of values {}".format(lib.calc_sum(values)))
         elif choice == 4:
-            print("Average of values {}".format(lib.calculateAverage(values)))
+            print("Average of values {}".format(lib.calc_average(values)))
         elif choice == 0:
             print("Exiting program.")
             print()

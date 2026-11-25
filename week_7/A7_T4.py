@@ -6,7 +6,7 @@ class Timestamp:
     consumption = 0.0
     price = 0.0
 
-def readTimestamps(PFilename: str, PTimestamps: list[Timestamp]) -> None:
+def read_timestamps(PFilename: str, PTimestamps: list[Timestamp]) -> None:
     print('Reading file "{}".'.format(PFilename))
     PTimestamps.clear() # clear PTimestamps just in case
     with open(PFilename, "r", encoding="utf-8") as Filehandle:
@@ -25,7 +25,7 @@ def readTimestamps(PFilename: str, PTimestamps: list[Timestamp]) -> None:
             Column.clear()
     return None
 
-def displayTimestamp(PTimestamps: list[Timestamp]) -> None:
+def display_timestamp(PTimestamps: list[Timestamp]) -> None:
     print("Electricity usage:")
     for TIMESTAMP in PTimestamps:
         Total = TIMESTAMP.consumption * TIMESTAMP.price
@@ -34,12 +34,12 @@ def displayTimestamp(PTimestamps: list[Timestamp]) -> None:
     return None
 
 def main():
-    Timestamps: list[Timestamp] = []
+    timestamps: list[Timestamp] = []
     print("Program starting")
     Filename = input("Insert filename: ")
-    readTimestamps(Filename, Timestamps)
-    displayTimestamp(Timestamps)
-    Timestamps.clear()
+    read_timestamps(Filename, timestamps)
+    display_timestamp(timestamps)
+    timestamps.clear()
     print("Program ending")
     return None
 

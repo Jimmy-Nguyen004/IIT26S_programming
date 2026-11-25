@@ -1,4 +1,4 @@
-def readNames(filename: str)-> str:
+def read_names(filename: str)-> str:
     print(f'Reading names from "{filename}".')
     names= ""
     with open(f"week_6/files/{filename}", "r", encoding="UTF-8") as source:
@@ -12,7 +12,7 @@ def readNames(filename: str)-> str:
                 names += ";" + name
     return names
 
-def analyseNames(names: str)-> str:
+def analyse_names(names: str)-> str:
     print("Analysing names...")
     namelist = names.split(";") if names != "" else []
     count = len(namelist)
@@ -29,20 +29,20 @@ def analyseNames(names: str)-> str:
     average = total_length / count if count > 0 else 0
     print("Analysis complete!")
 
-    Report = "#### REPORT BEGIN ####\n"
-    Report += "Name count - {}\n".format(count)
-    Report += "Shortest name - {} chars\n".format(shortest)
-    Report += "Longest name - {} chars\n".format(longest)
-    Report += "Average name - {:.2f} chars\n".format(average)
-    Report += "#### REPORT END ####"
-    return Report
+    report = "#### REPORT BEGIN ####\n"
+    report += "Name count - {}\n".format(count)
+    report += "Shortest name - {} chars\n".format(shortest)
+    report += "Longest name - {} chars\n".format(longest)
+    report += "Average name - {:.2f} chars\n".format(average)
+    report += "#### REPORT END ####"
+    return report
 
 def main() -> None:
     print("Program starting.")
     print("This program analyses a list of names from a file.")
     filename = input("Insert filename to read: ")
-    names = readNames(filename)
-    report = analyseNames(names)
+    names = read_names(filename)
+    report = analyse_names(names)
     print(report)
     print("Program ending.")
     return None

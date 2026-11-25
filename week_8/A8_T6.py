@@ -2,22 +2,22 @@ import A8_T6_lib as lib
 import template as temp
 from svgwrite import Drawing
 
-def showChoices() -> None:
+def show_choices() -> None:
     print("Options:\n1 - Draw square\n2 - Draw circle\n3 - Save svg\n0 - Exit")
     return None
 
 def main() -> None:
     print("Program starting.")
-    Dwg = Drawing()
+    dwg = Drawing()
     while True:
-        showChoices()
-        choice = temp.askChoice()
+        show_choices()
+        choice = temp.ask_choice()
         if choice == 1:
-            lib.drawSquare(Dwg)
+            lib.draw_square(dwg)
         elif choice == 2:
-            lib.drawCircle(Dwg)
+            lib.draw_circle(dwg)
         elif choice == 3:
-            lib.saveSvg(Dwg)
+            lib.save_svg(dwg)
         elif choice == 0:
             print("Exiting program.")
             print()

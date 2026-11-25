@@ -20,18 +20,18 @@ def show_reversed(word):
 
 def main():
     print("Program starting.")
-    Word = ""
+    word = ""
 
     while True:
         show_options()
         choice = input("Your choice: ")
 
         if choice == "1":
-            Word = insert_word()
+            word = insert_word()
         elif choice == "2":
-            show_word(Word)
+            show_word(word)
         elif choice == "3":
-            show_reversed(Word)
+            show_reversed(word)
         elif choice == "0":
             print("Exiting program.")
             break

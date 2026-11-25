@@ -2,7 +2,7 @@ from svgwrite import Drawing, cm
 from svgwrite.shapes import Rect, Circle, Polygon
 import math
 
-def drawSquare(PDwg: Drawing) -> None:
+def draw_square(PDwg: Drawing) -> None:
     print("Insert square")
     left_pos = int(input("- Left edge position: "))
     top_pos = int(input("- Top edge position: "))
@@ -12,7 +12,7 @@ def drawSquare(PDwg: Drawing) -> None:
     PDwg.add(Rect(insert=(left_pos, top_pos), size=(length_side, length_side), fill=fill, stroke=stroke))
     return None
 
-def drawCircle(PDwg: Drawing) -> None:
+def draw_circle(PDwg: Drawing) -> None:
     print("Insert circle")
     x_coord = int(input("- Center X coord: "))
     y_coord = int(input("- Center Y coord: "))
@@ -22,7 +22,7 @@ def drawCircle(PDwg: Drawing) -> None:
     PDwg.add(Circle(center=(x_coord, y_coord), r=radius, fill=fill, stroke=stroke))
     return None
 
-def drawHexagon(PDwg: Drawing) -> None:
+def draw_hexagon(PDwg: Drawing) -> None:
     print("Insert hexagon")
     x_coord = int(input("- Center X coord: "))
     y_coord = int(input("- Center Y coord: "))
@@ -42,7 +42,7 @@ def drawHexagon(PDwg: Drawing) -> None:
     PDwg.add(Polygon(points=points, fill=fill, stroke=stroke))
     return None
 
-def saveSvg(PDwg: Drawing) -> None:
+def save_svg(PDwg: Drawing) -> None:
     filename = input("Insert filename: ")
     print('Saving file to "{}"'.format(filename))
     proceed = input("Proceed (y/n)?: ")

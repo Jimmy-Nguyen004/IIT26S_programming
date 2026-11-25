@@ -1,26 +1,26 @@
 DELIMITER = ";"
-class TIMESTAMP:
+class TimeStamp:
     weekday = ""
     hour = 0
     consumption = 0.0
     price = 0.0
 
-class DAY_USAGE:
+class DayUsage:
     weekday = ""
     usage = 0.0
     cost = 0.0
 
-def readTimestamps(PFilename: str, PTimestamps: list[TIMESTAMP]) -> None:
+def read_timestamps(PFilename: str, PTimestamps: list[TimeStamp]) -> None:
     print('Reading file "{}".'.format(PFilename))
     PTimestamps.clear() # clear PTimestamps just in case
-    with open(PFilename, "r", encoding="utf-8") as Filehandle:
-        Filehandle.readline() # skip first line
-        for Line in Filehandle:
-            Row = Line.rstrip() # remove trailing spaces
-            if len(Row) == 0: # skip empty line
+    with open(PFilename, "r", encoding="utf-8") as filehandle:
+        filehandle.readline() # skip first line
+        for line in filehandle:
+            row = line.rstrip() # remove trailing spaces
+            if len(row) == 0: # skip empty line
                 continue
-            Data = Row.split(DELIMITER) # ["0", "1", "2", "3"]
-            Timestamp = TIMESTAMP()
+            Data = row.split(DELIMITER) # ["0", "1", "2", "3"]
+            Timestamp = TimeStamp()
             Timestamp.weekday = Data[0]
             Timestamp.hour = int(Data[1])
             Timestamp.consumption = float(Data[2])
@@ -29,13 +29,13 @@ def readTimestamps(PFilename: str, PTimestamps: list[TIMESTAMP]) -> None:
             Data.clear()
     return None
 
-def analyseTimestamps(PTimestamps: list, PResults: list[str]) -> None:
+def analyse_timestamps(PTimestamps: list, PResults: list[str]) -> None:
     WEEKDAYS = ("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday",)
     print("Analysing timestamps.")
     PResults.clear()
     DayUsages = [] # define DayUsages with a list
     for weekday in WEEKDAYS: # append every weekday in WEEKDAYS to big list DayUsages
-        DayUsage = DAY_USAGE() # create an object under name DayUsage
+        DayUsage = DayUsage() # create an object under name DayUsage
         DayUsage.weekday = weekday # append weekday to - weekday = "" - of class DAY_USAGE
         DayUsages.append(DayUsage)
 
@@ -51,7 +51,7 @@ def analyseTimestamps(PTimestamps: list, PResults: list[str]) -> None:
     DayUsages.clear()
     return None
 
-def displayResults(PResults: list[str]) -> None:
+def display_results(PResults: list[str]) -> None:
     print("Displaying results.")
     print("### Electricity consumption summary ###")
     for Result in PResults:
@@ -60,15 +60,15 @@ def displayResults(PResults: list[str]) -> None:
     return None
 
 def main():
-    Timestamps = []
-    Results: list[str] = []
+    timestamps = []
+    result: list[str] = []
     print("Program starting.")
-    Filename = input("Insert filename: ")
-    readTimestamps(Filename, Timestamps)
-    analyseTimestamps(Timestamps, Results)
-    displayResults(Results)
-    Timestamps.clear()
-    Results.clear()
+    filename = input("Insert filename: ")
+    read_timestamps(filename, timestamps)
+    analyse_timestamps(timestamps, result)
+    display_results(result)
+    timestamps.clear()
+    result.clear()
     print("Program ending.")
     return None
 

@@ -27,7 +27,7 @@ WEEKDAYS = (
     "Sunday"
 )
 
-def readTimestamps(PFilename: str, PTimestamps: list[datetime]) -> None:
+def read_timestamps(PFilename: str, PTimestamps: list[datetime]) -> None:
     PTimestamps.clear()
     with open(PFilename, "r", encoding="UTF-8") as source:
         for row in source:
@@ -37,31 +37,31 @@ def readTimestamps(PFilename: str, PTimestamps: list[datetime]) -> None:
             PTimestamps.append(datetime.strptime(row, TIMESTAMPS_FORMAT))
     return None
 
-def calculateTimestampsInYears(PYear: int, PTimestamps: list[datetime]) -> int:
+def calc_timestamps_in_years(PYear: int, PTimestamps: list[datetime]) -> int:
     count = 0
     for timestamp in PTimestamps:
         if timestamp.year == PYear:
             count += 1
     return count
 
-def calculateTimestampsInMonths(PMonth: str, PTimestamps: list[datetime]) -> int:
+def calc_timestamps_in_months(PMonth: str, PTimestamps: list[datetime]) -> int:
     month = PMonth.capitalize() # bypass any incorrect input which leads to incorrect output
     if month not in MONTHS: # because
         return 0
-    Num_Of_Month = MONTHS.index(month) + 1
+    num_Of_Month = MONTHS.index(month) + 1
     count = 0
     for timestamp in PTimestamps:
-        if timestamp.month == Num_Of_Month:
+        if timestamp.month == num_Of_Month:
             count += 1
     return count
 
-def calculateTimestampsInWeekdays(PWeekday: str, PTimestamps: list[datetime]) -> int:
+def calc_timestamps_in_weekdays(PWeekday: str, PTimestamps: list[datetime]) -> int:
     weekday = PWeekday.capitalize()
     if weekday not in WEEKDAYS:
         return 0
-    Num_of_Weekday = WEEKDAYS.index(weekday)
+    num_of_Weekday = WEEKDAYS.index(weekday)
     count = 0
     for timestamp in PTimestamps:
-        if timestamp.weekday() == Num_of_Weekday:
+        if timestamp.weekday() == num_of_Weekday:
             count += 1
     return count

@@ -1,10 +1,10 @@
-def calculateSum(PValues: list[float]) -> float:
+def calc_sum(PValues: list[float]) -> float:
     total = 0.0
     for value in PValues:
         total += value
     return round(total, 1)
 
-def calculateAverage(PValues: list[float]) -> float:
+def calc_average(PValues: list[float]) -> float:
     total = 0.0
     for value in PValues:
         total += value

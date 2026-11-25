@@ -4,7 +4,7 @@
 # Date: 21/11/2026
 ########################################################
 
-def checkUserInput(PNum: str):
+def check_user_input(PNum: str):
     try:
         return float(PNum)
     except ValueError:
@@ -17,7 +17,7 @@ def main() -> None:
     total = 0.0
     while True:
         num = input("Insert a floating-point value (0 to stop): ")
-        checked = checkUserInput(num)
+        checked = check_user_input(num)
         if len(num) == 0:
             break
         if checked is None:

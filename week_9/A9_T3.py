@@ -6,7 +6,7 @@
 
 import sys
 
-def readFile(PFilename: str) -> str:
+def read_file(PFilename: str) -> str:
     try:
         with open(PFilename, "r", encoding="UTF-8") as file:
             content = file.read()
@@ -21,7 +21,7 @@ def readFile(PFilename: str) -> str:
 def main() -> None:
     print("Program starting.")
     filename = input("Insert filename: ")
-    readFile(filename)
+    read_file(filename)
     print("Program ending.")
     return None
 

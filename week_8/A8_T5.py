@@ -1,17 +1,17 @@
 import template as temp
 import A8_T5_lib as lib
 
-def showMainOptions() -> None:
+def show_main_options() -> None:
     print("Options:\n1 - Login\n2 - Register\n0 - Exit")
     return None
 
-def showUserOptions() -> None:
+def show_user_options() -> None:
     print("User menu:\n1 - View profile\n2 - Change password\n0 - Log out")
 
-def userMenu(PUser: list[str]) -> None:
+def user_menu(PUser: list[str]) -> None:
     while True:
-        showUserOptions()
-        choice = temp.askChoice()
+        show_user_options()
+        choice = temp.ask_choice()
         if choice == 1:
             print("Profile ID {} - {}".format(PUser[0], PUser[1]))
         elif choice == 2:
@@ -28,27 +28,27 @@ def userMenu(PUser: list[str]) -> None:
 def main() -> None:
     print("Program starting.")
     while True:
-        showMainOptions()
-        choice = temp.askChoice()
+        show_main_options()
+        choice = temp.ask_choice()
         if choice == 1:
             username = input("Insert username: ")
             password = input("Insert password: ")
-            user = lib.loginUser(username, password)
+            user = lib.login_user(username, password)
             if len(user) == 0:
                 print("Authentication failed!")
             else:
                 print("Authentication successful!")
                 print()
-                userMenu(user)
+                user_menu(user)
                 continue
 
         elif choice == 2:
             username = input("Insert username: ")
-            if lib.existUser(username):
+            if lib.exist_user(username):
                 print("Username already taken!")
             else:
                 password = input("Insert password: ")
-                lib.registerUser(username, password)
+                lib.register_user(username, password)
                 print("User registration completed!")
 
         elif choice == 0:

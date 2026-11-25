@@ -1,13 +1,13 @@
 print("Calculate the area of a wall.")
 
 value1 = input("Enter the width in meters: ")
-Width = int(value1)
+width = int(value1)
 
 value2 = input("Enter the height in meters: ")
-Height = int(value2)
+height = int(value2)
 
-print(f"Width is {Width} m and height is {Height} m.")
+print(f"Width is {width} m and height is {height} m.")
 
-Area = Width * Height
+area = width * height
 
-print(f"The wall will be {Area} square meters.")
+print(f"The wall will be {area} square meters.")

@@ -3,10 +3,10 @@ import hashlib
 CREDENTIALS_FILE = "credentials.txt"
 DELIMITER = ";"
 
-def hashPassword(PPassword: str) -> str:
+def hash_password(PPassword: str) -> str:
     return hashlib.md5(PPassword.encode("UTF-8")).hexdigest()
 
-def readCredentials() -> list[list[str]]:
+def read_credentials() -> list[list[str]]:
     credentials: list[list[str]] = []
     with open(CREDENTIALS_FILE, "r", encoding="UTF-8") as source:
         for row in source:
@@ -17,26 +17,26 @@ def readCredentials() -> list[list[str]]:
     return credentials
 # print(readCredentials())
 
-def registerUser(PUsername: str, PPassword: str) -> None:
-    newUserID = len(readCredentials())
-    row = DELIMITER.join([str(newUserID), PUsername, hashPassword(PPassword)])
-    with open(CREDENTIALS_FILE, "a", encoding="UTF-8") as Filehandle:
-        Filehandle.write(row + "\n")
+def register_user(PUsername: str, PPassword: str) -> None:
+    new_user_id = len(read_credentials())
+    row = DELIMITER.join([str(new_user_id), PUsername, hash_password(PPassword)])
+    with open(CREDENTIALS_FILE, "a", encoding="UTF-8") as filehandle:
+        filehandle.write(row + "\n")
     return None
 
-def loginUser(PUsername: str, PPassword: str):
-    passwordHash = hashPassword(PPassword)
-    credentials = readCredentials()
+def login_user(PUsername: str, PPassword: str):
+    password_hashed = hash_password(PPassword)
+    credentials = read_credentials()
     for user in credentials:
         username = user[1]
         stored_password = user[2]
-        if username == PUsername and stored_password == passwordHash:
+        if username == PUsername and stored_password == password_hashed:
             return user
     return []
 
 # additional
-def existUser(PUsername: str) -> bool:
-    for user in readCredentials():
+def exist_user(PUsername: str) -> bool:
+    for user in read_credentials():
         if user[1] == PUsername:
             return True
     return False

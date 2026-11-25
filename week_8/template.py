@@ -1,4 +1,4 @@
-def askChoice() -> int:
+def ask_choice() -> int:
     choice = input("Your choice: ")
     try:
         availability = int(choice)

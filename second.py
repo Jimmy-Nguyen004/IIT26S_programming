@@ -8,5 +8,5 @@ for value, correct in credential.items():
         print("No more chances.")
         break
 else:
-    print("Login succesful!")
+    print("Login successful!")
 print("Exiting program.")

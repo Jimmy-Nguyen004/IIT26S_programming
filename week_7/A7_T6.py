@@ -35,16 +35,12 @@ class PLAYER:
     losses = 0
     draws = 0
 
-def showMenu() -> None:
+def show_menu() -> None:
     print()
-    print("Options:")
-    print("1 - Rock")
-    print("2 - Paper")
-    print("3 - Scissors")
-    print("0 - Quit game")
+    print("Options:\n1 - Rock\n2 - Paper\n3 - Scissors\n0 - Quit game")
     return None
 
-def showChoice(PPlayer: PLAYER, PChoice: int) -> None:
+def show_choice(PPlayer: PLAYER, PChoice: int) -> None:
     print("{} chose {}.".format(PPlayer.name, Choices[PChoice - 1]))
     print(arts[PChoice - 1])
     print("#" * 25)
@@ -53,8 +49,8 @@ def showChoice(PPlayer: PLAYER, PChoice: int) -> None:
 def play(PUser: PLAYER, PBot: PLAYER, PUserChoice: int) -> None:
     BotChoice = random.randint(1, 3)
     print("Rock! Paper! Scissors!")
-    showChoice(PUser, PUserChoice)
-    showChoice(PBot, BotChoice)
+    show_choice(PUser, PUserChoice)
+    show_choice(PBot, BotChoice)
     print()
     if PUserChoice == BotChoice:
         print("Draw! Both players chose {}.".format(Choices[PUserChoice - 1]))
@@ -71,7 +67,7 @@ def play(PUser: PLAYER, PBot: PLAYER, PUserChoice: int) -> None:
         PBot.wins += 1
     return None
 
-def showResults(PUser: PLAYER, PBot: PLAYER) -> None:
+def show_results(PUser: PLAYER, PBot: PLAYER) -> None:
     print()
     print("Results:")
     print("{} - wins ({}) - losses ({}) - draws ({})".format(PUser.name, PUser.wins, PUser.losses, PUser.draws))
@@ -81,21 +77,21 @@ def showResults(PUser: PLAYER, PBot: PLAYER) -> None:
 def main() -> None:
     print("Program starting.")
     print("Welcome to the rock-paper-scissors game!")
-    User = PLAYER()
-    User.name = input("Insert player name: ")
-    Bot = PLAYER()
-    Bot.name = "RPS-3PO"
-    print("Welcome!\nYour opponent is {}.\nGame starts...".format(User.name, Bot.name))
+    user = PLAYER()
+    user.name = input("Insert player name: ")
+    bot = PLAYER()
+    bot.name = "RPS-3PO"
+    print("Welcome!\nYour opponent is {}.\nGame starts...".format(user.name, bot.name))
     while True:
-        showMenu()
+        show_menu()
         choice = input("Your choice: ")
         if choice == "1" or choice == "2" or choice == "3":
-            play(User, Bot, int(choice))
+            play(user, bot, int(choice))
         elif choice == "0":
             break
         else:
             print("Unknown option.")
-    showResults(User, Bot)
+    show_results(user, bot)
     print("Program ending.")
     return None
 

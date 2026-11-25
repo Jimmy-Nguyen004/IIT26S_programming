@@ -4,26 +4,26 @@
 # Date: 21/11/2026
 ########################################################
 
-TEMP_MIN = -273.15
-TEMP_MAX = 10000
+temp_min = -273.15
+temp_max = 10000
 
-def collectCelsius():
+def collect_celsius():
     feed = input("Insert Celsius: ")
     try:
-        Celsius = float(feed)
+        cel = float(feed)
     except ValueError:
         print("could not convert string to float: '{}'".format(feed))
         return None
-    if Celsius < TEMP_MIN or Celsius > TEMP_MAX:
+    if cel < temp_min or cel > temp_max:
         print("{} temperature out of range.".format(feed))
         return None
-    return Celsius
+    return cel
 
 def main() -> None:
     print("Program starting.")
-    Celsius = collectCelsius()
-    if Celsius is not None:
-        print(f"You inserted {Celsius} °C")
+    celsius = collect_celsius()
+    if celsius is not None:
+        print(f"You inserted {celsius} °C")
     print("Program ending.")
     return None
 

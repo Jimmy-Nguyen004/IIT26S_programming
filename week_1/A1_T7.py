@@ -1,11 +1,11 @@
 print('Calculate fuel consumption')
 
-Feed = input('Enter travel distance (kilometers): ')
-Distance = int(Feed)
+feed = input('Enter travel distance (kilometers): ')
+distance = int(feed)
 
-Feed = input('Enter fuel usage (liters): ')
-FuelUsage = int(Feed)
+feed = input('Enter fuel usage (liters): ')
+fuel_usage = int(feed)
 
-Consumption = int(FuelUsage / Distance * 100)
+consumption = int(fuel_usage / distance * 100)
 
-print(f'Fuel consumption is {Consumption} l per 100 kilometers.')
+print(f'Fuel consumption is {consumption} l per 100 kilometers.')
